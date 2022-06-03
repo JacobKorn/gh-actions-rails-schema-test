@@ -1,0 +1,14 @@
+on:
+  pull_request
+
+jobs:
+  check_schema_changes:
+    runs-on: ubuntu-latest
+    name: Highlight when schema.rb has meaningful changes
+    steps:
+      - name: Hello Docker action step
+        id: helloDocker
+        uses: JacobKorn/gh-actions-ruby-test@v1.2
+        with:
+          who-to-greet: 'Joe'
+          message: "the message"
